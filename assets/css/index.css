@@ -1,0 +1,224 @@
+:root {
+    --gold-color: #ffce55;
+    --dark-color: #21292c;
+}
+body {
+    height: 5000px;
+    font-family: "Tilt Neon", sans-serif;
+    background-image: url(../images/header-bg.jpg);
+    background-attachment: fixed;
+}
+.container {
+    width: 80%;
+}
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+ul {
+    list-style: none;
+}
+h1::before {
+    position: absolute;
+    content: '';
+    background-color: var(--gold-color);
+    height: 3px;
+    width: 70px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+/* ================================== */
+/* NavBar */
+.navbar .navbar-brand {
+    color: var(--gold-color);
+}
+.navbar ul li a:hover {
+    color: var(--gold-color);
+}
+/* Landing */
+.landing {
+    width: 100%;
+    height: calc(100vh - 150px);
+    margin-top: 100px;
+    transition: 3s;
+}
+.landing .container {
+    margin-top: 400px;
+    transition: 3s;
+}
+.landing h1 {
+    color: var(--gold-color);
+}
+
+.landing .big-p {
+    font-size: 70px;
+}
+.landing .buttons .fr-btn {
+    border-color: #fff;
+    color: #fff;
+    transition: .2s;
+}
+.landing .buttons .fr-btn:hover {
+    border-color: var(--gold-color);
+    color: var(--gold-color);
+}
+.landing .buttons .sc-btn {
+    background-color: var(--gold-color);
+}
+@media (max-width: 767px) {
+    .landing h1 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 990px) {
+    .landing .big-p {
+        font-size: 50px;
+    }
+}
+@media (max-width: 767px) {
+    .landing .big-p {
+        font-size: 25px;
+    }
+}
+/* ================================== */
+/* Fr-Section */
+.fr-section .container {
+    animation-duration: 1s;
+    opacity: 0;
+    transition: 1s;
+}
+@keyframes bounceInUp {
+0% {
+    transform: translateY(600px);
+}
+50% {
+    transform: translateY(-20px);
+}
+75% {
+    transform: translateY(5px);
+}
+100% {
+    transform: translateY(0);
+}
+}
+.fr-section .quot {
+    border-left: var(--gold-color) solid 5px;
+}
+.fr-section .circle {
+    height: 300px;
+}
+.fr-section .numb {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 7px solid var(--gold-color);
+}
+/* ================================== */
+/* Sc-Section */
+.sc-section {
+    background-color: #f0f0f0;
+}
+.sc-section .container {
+    animation-duration: 1s;
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    }
+.sc-section .pic::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .3;
+    left: -100%;
+    top: 0;
+    transition: .5s;
+    z-index: 1;
+}
+.sc-section .pic:hover::after {
+    left: 0;
+}
+.sc-section .pic::before {
+    position: absolute;
+    content: 'See Project';
+    border-radius: 40px;
+    padding: 10px 20px;
+    background-color: var(--dark-color);
+    color: var(--gold-color);
+    left: -70px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: .5s;
+    z-index: 2;
+}
+.sc-section .pic:hover::before {
+    left: 50%;
+}
+/* ================================== */
+/* Third-Section */
+.third-section .container {
+    animation-duration: 1s;
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.third-section .name {
+    color: var(--gold-color);
+}
+.third-section i,
+.forth-section i {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: var(--gold-color);
+    margin-top: 20px;
+}
+/* ================================== */
+/* Forth-Section */
+.forth-section {
+    background-color: #f0f0f0;
+}
+.forth-section .container {
+    animation-duration: 1s;
+}
+/* ================================== */
+/* Team */
+.team .container {
+    opacity: 0;
+    transition: 1s;
+    animation-duration: 1s;
+}
+.team .memb img {
+    transition: .5s;
+}
+.team .memb img:hover {
+    transform: translate3d(0px,5px,200px)
+}
+/* ================================== */
+/* Contact Us */
+.contact {
+    background-color: #f0f0f0;
+}
+/* ================================== */
+/* About Us */
+.about p:hover{
+    color: var(--gold-color);
+    cursor: pointer;
+}
+/* ================================== */
+/* Footer */
+.footer span {
+    color: var(--gold-color);
+}
